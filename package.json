@@ -1,9 +1,9 @@
 {
-  "name": "redux-first-router-demo",
-  "description": "Universal Redux-First Router Demo",
+  "name": "refiro-with-ejs",
+  "description": "redux-first-router-demo with ejs support",
   "version": "1.0.0",
   "main": "server/index.js",
-  "author": "James Gillmore <james@faceyspacey.com>",
+  "author": "Martiuh González <martiuh@gmail.com>",
   "license": "MIT",
   "scripts": {
     "start": "npm run clean && cross-env NODE_ENV=development babel-watch server/index.js",
@@ -17,7 +17,8 @@
     "precommit": "lint-staged",
     "cm": "git-cz",
     "lint": "eslint --fix src server webpack",
-    "format": "prettier --single-quote --semi=false --write '{src,server,webpack}/**/*.js' && npm run lint"
+    "format": "prettier --single-quote --semi=false --write '{src,server,webpack}/**/*.js' && npm run lint",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "babel-polyfill": "^6.23.0",
