@@ -10,6 +10,7 @@ import serverConfig from '../webpack/server.dev'
 import { findVideos, findVideo } from './api'
 
 const DEV = process.env.NODE_ENV === 'development'
+const PORT = process.env.PORT || 3000
 const publicPath = clientConfig.output.publicPath
 const outputPath = clientConfig.output.path
 const app = express()
@@ -66,6 +67,6 @@ else {
   app.use(serverRender({ clientStats, outputPath }))
 }
 
-app.listen(3000, () => {
-  console.log('Listening @ http://localhost:3000/')
+app.listen(PORT, () => {
+  console.log(`Listening @ http://localhost:${PORT}/`)
 })
